@@ -52,12 +52,12 @@ print("Recovered secret:", recovered)
 
 Hasil eksekusi program Caesar Cipher:
 
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
+<img width="1366" height="768" alt="Capture 2" src="https://github.com/user-attachments/assets/9ddf1957-7946-4120-9370-e6e0b6b471c0" />/output.png)
 )
 
----
+---<img width="1366" height="768" alt="capture 1" src="https://github.com/user-attachments/assets/7f5c5652-26ac-4329-b762-3b1e0f707b3f" />
+<img width="1366" height="768" alt="Capture 3" src="https://github.com/user-attachments/assets/29275393-b0ac-471e-abcb-e799bb980c33" />
+
 
 ## 7. Jawaban Pertanyaan
 1. Apa keuntungan utama Shamir Secret Sharing dibanding membagikan salinan kunci secara langsung?

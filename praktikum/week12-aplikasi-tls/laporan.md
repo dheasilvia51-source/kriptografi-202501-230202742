@@ -1,21 +1,22 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-:12
+Topik:aplikasi-tls 
+Nama: Dhea Silvia
+NIM: 230202742
+Kelas: 5ikrb
 
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+1. Menganalisis penggunaan kriptografi pada email dan SSL/TLS.
+2. Menjelaskan enkripsi dalam transaksi e-commerce.
+3. Mengevaluasi isu etika & privasi dalam penggunaan kriptografi di kehidupan sehari-hari.
 
----
 
 ## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
+Transport Layer Security (TLS) merupakan sebuah protokol keamanan yang dirancang untuk melindungi pertukaran data dalam jaringan komputer, terutama pada layanan berbasis internet. Protokol ini beroperasi pada lapisan transport dan bertujuan memastikan kerahasiaan data, menjaga keutuhan informasi, serta melakukan proses otentikasi antara pihak klien dan server. TLS adalah pengembangan lanjutan dari Secure Socket Layer (SSL) dan saat ini digunakan sebagai standar utama dalam komunikasi jaringan yang aman.
 
+Dalam implementasinya, TLS menggabungkan teknik kriptografi asimetris dan simetris. Kriptografi asimetris dimanfaatkan pada tahap handshake untuk proses verifikasi identitas dan pertukaran kunci secara aman, umumnya melalui sertifikat digital yang dikeluarkan oleh Certificate Authority (CA). Setelah kunci sesi berhasil disepakati, TLS kemudian menggunakan kriptografi simetris yang lebih efisien untuk mengenkripsi data selama proses komunikasi berlangsung. TLS banyak diterapkan pada berbagai layanan jaringan seperti HTTPS pada web, layanan email (SMTPS, IMAPS), VPN, serta berbagai aplikasi client-server. Keberadaan TLS sangat penting karena mampu melindungi data yang dikirim melalui jaringan publik dari ancaman penyadapan, perubahan data, dan serangan Man-in-the-Middle (MITM), sehingga keamanan transaksi dan pertukaran informasi digital dapat terjaga.
 ---
 
 ## 3. Alat dan Bahan

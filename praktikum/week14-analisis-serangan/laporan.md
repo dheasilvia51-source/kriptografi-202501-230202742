@@ -1,22 +1,23 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-: 14
+Topik: analisis serangan kriptografi 
+Nama: Dhea Silvia
+NIM: 230202742
+Kelas:5ikrb  
 
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
-
----
+1. Mengidentifikasi jenis serangan pada sistem informasi nyata.
+2. Mengevaluasi kelemahan algoritma kriptografi yang digunakan.
+3. Memberikan rekomendasi algoritma kriptografi yang sesuai untuk perbaikan keamanan.
 
 ## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
-
----
+Studi kasus yang dianalisis adalah penggunaan algoritma hash MD5
+untuk penyimpanan password pengguna. MD5 merupakan algoritma hash
+yang saat ini sudah tidak direkomendasikan karena rentan terhadap
+serangan brute force dan dictionary attack. Penyerang dapat mencocokkan hash MD5 dengan database hash yang sudah
+diketahui sehingga password dapat ditemukan dalam waktu singkat.
 
 ## 3. Alat dan Bahan
 (- Python 3.x  
@@ -36,52 +37,44 @@ Contoh format:
 ---
 
 ## 5. Source Code
-(Salin kode program utama yang dibuat atau dimodifikasi.  
-Gunakan blok kode:
+import hashlib
 
-```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
-```
-)
+password = "admin123"
+md5_hash = hashlib.md5(password.encode()).hexdigest()
+sha256_hash = hashlib.sha256(password.encode()).hexdigest()
 
----
+print("Password:", password)
+print("MD5:", md5_hash)
+print("SHA-256:", sha256_hash)
+
 
 ## 6. Hasil dan Pembahasan
-(- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
-- Berikan tabel atau ringkasan hasil uji jika diperlukan.  
-- Jelaskan apakah hasil sesuai ekspektasi.  
-- Bahas error (jika ada) dan solusinya. 
 
-Hasil eksekusi program Caesar Cipher:
-
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
-)
-
----
+<img width="1366" height="768" alt="Screenshot 2026-01-17 113446" src="https://github.com/user-attachments/assets/7ad2a5b3-1ab2-40b8-a19a-1d7fd96aa2a8" />
 
 ## 7. Jawaban Pertanyaan
-(Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
-)
----
+. 1. Mengapa banyak sistem lama masih rentan terhadap brute force?**  
+  = Karena masih menggunakan algoritma kriptografi lama yang sudah
+   tidak aman dan belum diperbarui.
+
+2. Apa perbedaan kelemahan algoritma dan implementasi?**  
+  = Kelemahan algoritma berasal dari desain kriptografi, sedangkan
+   kelemahan implementasi berasal dari kesalahan konfigurasi atau
+   penggunaan algoritma.
+
+3. Bagaimana memastikan sistem tetap aman di masa depan?**  
+   = Dengan melakukan audit keamanan berkala, memperbarui algoritma
+   kriptografi, dan mengikuti standar keamanan terbaru.
+
 
 ## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
-
----
+Analisis menunjukkan bahwa penggunaan algoritma kriptografi lemah
+seperti MD5 dapat membahayakan keamanan sistem. Dengan mengganti
+algoritma dan memperbaiki implementasi, risiko serangan kriptografi
+dapat diminimalkan.
 
 ## 9. Daftar Pustaka
-(Cantumkan referensi yang digunakan.  
-Contoh:  
-- Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
-- Stallings, W. *Cryptography and Network Security*.  )
-
----
+Stallings, W. (2017). Cryptography and Network Security. Pearson.
 
 ## 10. Commit Log
 (Tuliskan bukti commit Git yang relevan.  
@@ -89,7 +82,7 @@ Contoh:
 ```
 commit abc12345
 Author: Nama Mahasiswa <email>
-Date:   2025-09-20
+Date:   2026-01-17
 
-    week2-cryptosystem: implementasi Caesar Cipher dan laporan )
+    week14- analisis serangan: analisis serangan dan laporan )
 ```

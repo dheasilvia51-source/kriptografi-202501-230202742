@@ -24,46 +24,62 @@ Ditinjau dari sudut pandang etika dan privasi, kriptografi menjadi instrumen pen
 ## 3. Alat dan Bahan
  - web browser
 - Git dan akun GitHub  
-- Library tambahan (misalnya pycryptodome, jika diperlukan)  )
+- google chrome
 
 ---
 
 ## 4. Langkah Percobaan
-(Tuliskan langkah yang dilakukan sesuai instruksi.  
-Contoh format:
-1. Membuat file `caesar_cipher.py` di folder `praktikum/week2-cryptosystem/src/`.
-2. Menyalin kode program dari panduan praktikum.
-3. Menjalankan program dengan perintah `python caesar_cipher.py`.)
+Analisis SSL/TLS pada Website E-commerce
+Website: Tokopedia
 
+Hasil observasi sertifikat digital pada website Tokopedia menunjukkan bahwa:
+
+Protokol: HTTPS
+
+Certificate Authority (CA): DigiCert Inc
+
+Masa Berlaku Sertifikat: (sesuai hasil observasi)
+
+Algoritma Kriptografi:
+
+Public Key: RSA
+
+Enkripsi Simetris: AES
+
+Hash: SHA-256
+
+Sertifikat digital memastikan bahwa komunikasi antara browser pengguna dan server Tokopedia telah terenkripsi serta terverifikasi keasliannya.
 ---
 
 ## 5. Source Code
-(Salin kode program utama yang dibuat atau dimodifikasi.  
-Gunakan blok kode:
 
-```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
-```
-)
-
----
 
 ## 6. Hasil dan Pembahasan
-(- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
-- Berikan tabel atau ringkasan hasil uji jika diperlukan.  
-- Jelaskan apakah hasil sesuai ekspektasi.  
-- Bahas error (jika ada) dan solusinya. 
 
-Hasil eksekusi program Caesar Cipher:
+<img width="1365" height="767" alt="Screenshot 2026-01-17 105827" src="https://github.com/user-attachments/assets/70246828-a720-4598-a05f-3de1b55bbf39" />
 
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
-)
-
----
+ Perbedaan utama antara HTTP dan HTTPS terletak pada aspek keamanan:
+HTTP: Data dikirim dalam bentuk plaintext sehingga mudah disadap.
+HTTPS: Data dienkripsi menggunakan TLS sehingga lebih aman dari serangan seperti sniffing dan Man-in-the-Middle (MITM).
+Dengan demikian, HTTPS memberikan perlindungan yang lebih baik terhadap data pengguna.
+**Analisis Enkripsi dalam Transaksi E-commerce
+ Dalam transaksi e-commerce, TLS digunakan untuk:
+Mengamankan proses login pengguna.
+Melindungi data pembayaran seperti nomor kartu kredit atau e-wallet.
+Menjamin integritas data agar tidak dimodifikasi selama transmisi.
+Tanpa penggunaan TLS, transaksi e-commerce rentan terhadap:
+ - Man-in-the-Middle Attack
+ - Pencurian kredensial
+ - Pemalsuan data transaksi
+Oleh karena itu, TLS menjadi komponen wajib dalam sistem e-commerce modern.
+Analisis Etika dan Privasi
+- Privasi dalam Email Terenkripsi
+ Teknologi seperti PGP dan S/MIME digunakan untuk mengenkripsi email sehingga hanya penerima yang berhak dapat membaca isi pesan. Hal ini meningkatkan privasi pengguna, namun juga menimbulkan tantangan dalam pengawasan komunikasi.
+- Dilema Etika
+Beberapa dilema etika dalam penggunaan kriptografi antara lain:
+1. Apakah perusahaan berhak mendekripsi email karyawan untuk kepentingan audit?
+2. Sejauh mana pemerintah boleh melakukan pengawasan terhadap komunikasi terenkripsi demi keamanan nasional?
+Di satu sisi, kriptografi melindungi privasi individu, namun di sisi lain dapat menghambat proses penegakan hukum jika disalahgunakan.
 
 ## 7. Jawaban Pertanyaan
 1. Apa perbedaan utama antara HTTP dan HTTPS?
